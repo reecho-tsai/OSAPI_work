@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="http://static.app.local/css/mdui.min.css"/>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        function alt()
+        {
+            var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', 'http://api.app.local/hello/hi', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+        /**
+         * 获取数据后的处理程序
+         */
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                var json = httpRequest.responseText;//获取到json字符串，还需解析
+                alert(json);
+            }
+        };
+
+        }
+   
+    </script>
+    <h1>OSAPI DEBUG PAGE</h1>
+    <p>CSS DEBUG</p>
+    <i class="mdui-icon material-icons">check_box</i>
+    <i class="mdui-icon material-icons mdui-text-color-red">check_box</i>
+    <i class="mdui-icon material-icons mdui-text-color-theme">check_box</i>
+    <p> C# CALL</p>
+    <button onclick="alt()">test</button>
+    <!-- MDUI JavaScript -->
+    <script src="http://static.app.local/css/mdui.min.css"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="wwwroot\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\HelloService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="HelloService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetDimension.NanUI" Version="0.9.90.193" />
+    <PackageReference Include="NetDimension.NanUI.Runtime" Version="90.6.7.1" />
+  </ItemGroup>
+
+</Project>
