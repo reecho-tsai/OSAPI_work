@@ -16,7 +16,7 @@
         function alt()
         {
             var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-        httpRequest.open('GET', 'http://api.app.local/hello/hi', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.open('GET', 'http://api.app.local/drvinfo/drvstatus', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
         httpRequest.send();//第三步：发送请求  将请求参数写在URL中
         /**
          * 获取数据后的处理程序
@@ -36,7 +36,7 @@
     <i class="mdui-icon material-icons">check_box</i>
     <i class="mdui-icon material-icons mdui-text-color-red">check_box</i>
     <i class="mdui-icon material-icons mdui-text-color-theme">check_box</i>
-    <p> C# CALL</p>
+    <p> C# CALL - DRVINFO </p>
     <button onclick="alt()">test</button>
     <!-- MDUI JavaScript -->
     <script src="http://static.app.local/css/mdui.min.css"></script>

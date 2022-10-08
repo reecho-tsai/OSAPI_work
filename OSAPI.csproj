@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="HelloService.cs" />
+    <EmbeddedResource Include="DrvInfoService.cs" />
   </ItemGroup>
 
   <ItemGroup>
