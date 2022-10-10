@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 	 <LangVersion>9.0</LangVersion>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -21,10 +22,12 @@
 
   <ItemGroup>
     <Compile Remove="wwwroot\HelloService.cs" />
+    <Compile Remove="wwwroot\TaskService.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="DrvInfoService.cs" />
+    <EmbeddedResource Include="TaskService.cs" />
   </ItemGroup>
 
   <ItemGroup>

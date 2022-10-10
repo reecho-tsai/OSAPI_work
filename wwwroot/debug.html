@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="http://static.app.local/css/mdui.min.css"/>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <!-- MDUI JavaScript -->
+      <script src="http://static.app.local/js/mdui.min.js"></script>
+      <script type="text/javascript">
+          function alt(link) {
+              var httpRequest = new XMLHttpRequest();
+              httpRequest.open('GET', link, true);
+              httpRequest.send();
+
+              httpRequest.onreadystatechange = function () {
+                  if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                      var json = httpRequest.responseText;
+                      mdui.alert(json, "233");
+                      //alert(json);
+                  }
+              };
+
+          }
+
+      </script>
+      <h1>OSAPI DEBUG PAGE</h1>
+      <a href="http://static.app.local/index.html">Return to Main Page</a>
+      <p>CSS DEBUG</p>
+      <i class="mdui-icon material-icons">check_box</i>
+      <i class="mdui-icon material-icons mdui-text-color-red">check_box</i>
+      <i class="mdui-icon material-icons mdui-text-color-theme">check_box</i>
+      <p> C# CALL  </p>
+      <button onclick="alt('http://api.app.local/drvinfo/drvstatus')">DRVINFO</button>
+      <br />
+      <button onclick="alt('http://api.app.local/copy/dircopy')">DIR COPY</button>
+      <br />
+      <button onclick="alt('http://api.app.local/copy/filecopy')">File COPY</button>
+      <br />
+      <button onclick="alt('http://api.app.local/copy/filedel')">File Delete</button>
+      <br />
+      <button onclick="alt('http://api.app.local/usb/disusb')">Disable USB Storage</button>
+      <br />
+      <button onclick="alt('http://api.app.local/usb/enableusb')">Enable USB Storage</button>
+      <br />
+      <button onclick="alt('http://api.app.local/task/taskinfo')">taskinfo</button>
+
+  </body>
+</html>

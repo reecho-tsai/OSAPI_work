@@ -31,17 +31,17 @@ public class DrvInfoService : DataService
             dt = GetDriveType(drv.ToString() + ":\\");
             if (((int)dt) != 0 && (int)dt != 1)
             {
-                rtn += (drv.ToString() + ":\\ " + dt.ToString() + "\n");
+                rtn += (drv.ToString() + ":\\ " + dt.ToString() + "<br />");
                 drvCount++;
                 GetDiskFreeSpaceEx(drv.ToString() + ":\\", out FreeBytesAvailable, out TotalNumberOfBytes,
                    out TotalNumberOfFreeBytes);
-                rtn += ((double)FreeBytesAvailable / 1024 / 1024 / 1024 + "\n");
+                rtn += "Free Space: " + ((double)FreeBytesAvailable / 1024 / 1024 / 1024 + " GBytes <br />");
             }
         }
 
 
 
-        rtn += drvCount;
+        rtn += "<b> Drive Count: "+ drvCount + "</b>";
         return Text(rtn);
     }
 }
