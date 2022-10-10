@@ -14,16 +14,16 @@ public class TaskService : DataService
         Process curr = Process.GetCurrentProcess();
         
         string ret = "";
-        ret += "ID: " + curr.Id + "\n"
-            + "Name: " + curr.ProcessName + "\n"
-            + "Physical memory usage     : " + curr.WorkingSet64 + " Bytes \n"
-            + "Base priority             : " + curr.BasePriority + "\n"
-            + "Priority class            : " + curr.PriorityClass + "\n"
-            + "User processor time       : " + curr.UserProcessorTime + "\n"
-            + "Privileged processor time : " + curr.PrivilegedProcessorTime + "\n"
-            + "Total processor time      : " + curr.TotalProcessorTime + "\n"
-            + "Paged system memory size  : " + curr.PagedSystemMemorySize64 + " Bytes \n"
-            + "Paged memory size         : " + curr.PagedMemorySize64 + " Bytes \n";
+        ret += "ID: " + curr.Id + "<br />"
+            + "Name: " + curr.ProcessName + "<br />"
+            + "Physical memory usage     : " + curr.WorkingSet64 + " Bytes <br />"
+            + "Base priority             : " + curr.BasePriority + "<br />"
+            + "Priority class            : " + curr.PriorityClass + "<br />"
+            + "User processor time       : " + curr.UserProcessorTime + "<br />"
+            + "Privileged processor time : " + curr.PrivilegedProcessorTime + "<br />"
+            + "Total processor time      : " + curr.TotalProcessorTime + "<br />"
+            + "Paged system memory size  : " + curr.PagedSystemMemorySize64 + " Bytes <br />"
+            + "Paged memory size         : " + curr.PagedMemorySize64 + " Bytes <br />";
 
         return Text(ret);
     }

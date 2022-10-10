@@ -6,7 +6,7 @@ class MainWindow : Formium
     // 设置窗体样式类型
     public override HostWindowType WindowType => HostWindowType.System;
     // 指定启动 Url
-    public override string StartUrl => "http://static.app.local/debug.html";
+    public override string StartUrl => "http://static.app.local/index.html";
 
     public MainWindow()
     {
