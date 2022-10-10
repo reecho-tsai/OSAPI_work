@@ -35,7 +35,9 @@ public class DrvInfoService : DataService
                 drvCount++;
                 GetDiskFreeSpaceEx(drv.ToString() + ":\\", out FreeBytesAvailable, out TotalNumberOfBytes,
                    out TotalNumberOfFreeBytes);
-                rtn += "Free Space: " + ((double)FreeBytesAvailable / 1024 / 1024 / 1024 + " GBytes <br />");
+                rtn += "FreeBytesAvailable: " + ((double)FreeBytesAvailable / 1024 / 1024 / 1024 + " GBytes <br />")
+                    + "TotalNumberOfBytes: " + ((double)TotalNumberOfBytes / 1024 / 1024 / 1024 + " GBytes <br />")
+                    + "TotalNumberOfFreeBytes: " + ((double)TotalNumberOfFreeBytes / 1024 / 1024 / 1024 + " GBytes <br />");
             }
         }
 
